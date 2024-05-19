@@ -12,6 +12,7 @@ module WellKnown
 
     def show
       expires_in 3.days, public: true
+      headers['Access-Control-Allow-Origin'] = '*'
       render json: @account, serializer: WebfingerSerializer, content_type: 'application/jrd+json'
     end
 
