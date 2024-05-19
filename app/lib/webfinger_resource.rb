@@ -18,7 +18,7 @@ class WebfingerResource
     when /@/
       username_from_acct
     else
-      raise InvalidRequest
+      raise ActiveRecord::RecordNotFound
     end
   end
 
